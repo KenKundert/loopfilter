@@ -1,15 +1,15 @@
 Loop Filter
 ===========
 
-A discrete-time model for a Type-2 loop filter with clipping.
+A discrete-time model for a Type-2 PLL loop filter with clipping.
 
 :Author: Ken Kundert
 :Version: 0.0
 :Released: 2023-08-31
 
-This loop filter is meant to be embedded in a larger model.  The input is 
-``Icp`` and the output is ``Verr``.  The parameters are ``C1``, ``C2``, ``R2`` 
-and ``vdd``.  Primitive time step control is included.
+This loop filter is meant to be embedded in a larger model of a PLL.  The input 
+is ``Icp`` and the output is ``Verr``.  The parameters are ``C1``, ``C2``, 
+``R2`` and ``vdd``.  Primitive time step control is included.
 
 The basic filter topology is:
 
