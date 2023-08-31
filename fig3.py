@@ -15,7 +15,7 @@ try:
         Rt = Resistor(C=src.C, xoff=100, name='Rt', orient='v')
         Vt = Source(p=Rt.n, kind='vdc', yoff=-15, name='Vt', orient='v')
         Ground(C=Vt.n)
-        out = Pin(C=Rt.p, xoff=50, name='Verr', w=2)
+        out = Pin(C=Rt.p, xoff=50, name='Verr', w=3)
         Wire([src.n, out.C])
 
 except Error as e:

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="100%" version="1.1" viewBox="-52.0,-77.0,331.0,241.0" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="full" height="100%" version="1.1" viewBox="-52.0,-77.0,381.0,241.0" width="100%">
   <defs/>
   <g id="bkgnd">
-    <rect fill="white" height="241.0" stroke="none" stroke-width="1" width="331.0" x="-52.0" y="-77.0"/>
+    <rect fill="white" height="241.0" stroke="none" stroke-width="1" width="381.0" x="-52.0" y="-77.0"/>
   </g>
   <g id="symbol" transform="translate(0,0) scale(1,-1)">
     <rect fill="none" height="100" stroke="none" width="100" x="-50.0" y="-50.0"/>
@@ -60,7 +60,7 @@
   </g>
   <g id="text"/>
   <g id="symbol" transform="translate(250,-50.0)">
-    <rect fill="none" height="50" stroke="none" width="50" x="-25.0" y="-25.0"/>
+    <rect fill="none" height="50" stroke="none" width="150" x="-75.0" y="-25.0"/>
     <circle cx="4" cy="0" fill="white" r="4" stroke="black" stroke-width="2"/>
   </g>
   <g id="text">
