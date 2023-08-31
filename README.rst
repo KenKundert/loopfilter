@@ -23,7 +23,8 @@ capacitor at the beginning of the step and the resistance is ΔT/C.
 
 In the next figure, ``C1`` is replace by its discrete time equivalent, ``Ra`` 
 and ``Va``.  Both ``R2`` and ``C2`` are replaced by ``Rb`` and ``Vb``, where 
-``Rb`` = ``R2`` + ΔT/``C2``.
+``Rb`` = ``R2`` + ΔT/``C2``.  ``Verr`` is the output voltage at the end of the 
+step.
 
 .. image:: fig2.svg
     :width: 35 %
