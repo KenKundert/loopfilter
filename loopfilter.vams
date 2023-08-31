@@ -1,0 +1,21 @@
+// Loop Filter
+always begin : loopfilter
+    tprev = t;
+    t = $realtime;
+    dt = t - tprev;
+    Ra = dt/C1;
+    Rb = dt/C2 + R2;
+    Rt = Ra*Rb/(Ra + Rb);
+    Vt = (Rb*Va + Ra*Vb)/(Ra + Rb);
+    Verr = Icp*Rt + Vt;
+    if (Verr < 0)
+    	Verr = 0;
+    if (Verr > vdd)
+    	Verr = vdd;
+    Va = Verr;
+    Vb = ((Vt + Rt*Icp - Vb)/Rb)*dt/C2 + Vb;
+    if (up || dwn)
+	#(500e-12);
+    else
+	#(30e-9);
+end
