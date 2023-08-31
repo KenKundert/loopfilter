@@ -32,7 +32,7 @@ and ``Va``.  Both ``R2`` and ``C2`` are replaced by ``Rb`` and ``Vb``, where
 Finally, the ``a`` and ``b`` sides of the filter can be combined:
 
 .. image:: fig3.svg
-    :width: 35 %
+    :width: 25 %
     :align: center
 
 This is implemented in the following code:
