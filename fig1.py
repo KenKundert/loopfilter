@@ -17,7 +17,7 @@ try:
         R2 = Resistor(C=C1.C, xoff=100, name='R2', orient='v')
         C2 = Capacitor(p=R2.n, yoff=-15, name='C2')
         Ground(C=C2.n)
-        out = Pin(C=R2.p, xoff=50, name='Verr', w=3)
+        out = Pin(C=R2.p, xoff=50, name='Vctrl', w=3)
         Wire([src.n, out.C])
 
 except Error as e:

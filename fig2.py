@@ -18,7 +18,7 @@ try:
         Rb = Resistor(C=Ra.C, xoff=100, name='Rb', orient='v')
         Vb = Source(p=Rb.n, kind='vdc', yoff=-15, name='Vb')
         Ground(C=Vb.n)
-        out = Pin(C=Rb.p, xoff=50, name='Verr', w=3)
+        out = Pin(C=Rb.p, xoff=50, name='Vctrl', w=3)
         Wire([src.n, out.C])
 
 except Error as e:

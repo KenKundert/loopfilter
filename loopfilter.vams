@@ -1,5 +1,7 @@
 // Loop Filter
 always begin : loopfilter
+
+    // filter
     tprev = t;
     t = $realtime;
     dt = t - tprev;
@@ -7,15 +9,21 @@ always begin : loopfilter
     Rb = dt/C2 + R2;
     Rt = Ra*Rb/(Ra + Rb);
     Vt = (Rb*Va + Ra*Vb)/(Ra + Rb);
-    Verr = Icp*Rt + Vt;
-    if (Verr < 0)
-    	Verr = 0;
-    if (Verr > vdd)
-    	Verr = vdd;
-    Va = Verr;
+    Vctrl = Icp*Rt + Vt;
+
+    // clipping
+    if (Vctrl < 0)
+        Vctrl = 0;
+    if (Vctrl > vdd)
+        Vctrl = vdd;
+
+    // update capacitor voltages
+    Va = Vctrl;
     Vb = ((Vt + Rt*Icp - Vb)/Rb)*dt/C2 + Vb;
+
+    // time step control
     if (up || dwn)
-	#(500e-12);
+        #(500e-12);
     else
-	#(30e-9);
+        #(30e-9);
 end
